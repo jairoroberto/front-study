@@ -1,5 +1,5 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
+import javascriptLogo from './public/javascript.svg'
 import { setupCounter } from './counter.js'
 
 document.querySelector('#app').innerHTML = `
@@ -8,7 +8,7 @@ document.querySelector('#app').innerHTML = `
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
     <a href="#" class="w-50 mx-auto my-10">
-      <img src="${javascriptLogo}" class="logo vanilla w-20" alt="JavaScript logo" />
+      <img src="${javascriptLogo}" class="logo rounded-md vanilla w-20" alt="JavaScript logo" />
     </a>
     <h1>Hello Vite!</h1>
     <div class="card">
