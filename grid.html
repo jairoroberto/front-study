@@ -16,6 +16,11 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'GoTham Rounded Medium', sans-serif;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-text-size-adjust: 100%;
     }
 
     h1,
@@ -25,16 +30,35 @@
     h5,
     h6 {
       margin: 0;
-      padding: 0;
+      padding: 0 0 10px 0;
       box-sizing: border-box;
-      margin-bottom: 1rem;
+      margin: 1rem 0;
+      border-bottom: 1px solid #ddd
     }
 
-    .container-box {
+    .container-flex {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .container-flex div {
+      background: #fff;
+      padding: 10px;
+      border-radius: 3px;
+      margin: 5px;
+      flex: 1 1 auto;
+      /* flex: flex-grow flex-shrink flex-basis */
+      color: #a663e5;
+      width: 200px
+    }
+
+    .container {
       max-width: 1200px;
       background: #f2f2f2;
       padding: 1rem;
-      color: darkslategray
+      color: darkslategray;
+      margin: 0 auto;
     }
 
     .container-grid {
@@ -52,9 +76,20 @@
 </head>
 
 <body>
-  <div class="container-box">
+  <div class="container">
 
-    <h1>Estudo de Grid CSS</h1>
+    <h2>Revisando do FLEXBOX</h2>
+
+    <div class="container-flex">
+      <div>1 - Lorem ipsum</div>
+      <div>2 - Lorem, ipsum dolor.</div>
+      <div>3 - Lorem ipsum dolor sit.</div>
+      <div>4 - Lorem ipsum dolor sit amet.</div>
+      <div>5 - Lorem ipsum dolor sit amet consectetur.</div>
+      <div>6 - Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+    </div>
+
+    <h2>Estudo de Grid CSS</h2>
 
     <div class="container-grid">
       <div>1</div>
@@ -67,6 +102,18 @@
 
   </div>
 
+
+  <script>
+    const divFlexAll = document.querySelectorAll('.container-flex div:nth-child(3n)')
+    divFlexAll.forEach((div) => {
+      div.style.background = '#a663e5';
+      div.style.color = '#fff';
+    });
+
+    const divFlexUnique = document.querySelector('.container-flex div')
+    divFlexUnique.innerHTML = divFlexUnique.offsetWidth;
+    divFlexUnique.style.color = '#00b835';
+  </script>
 
 </body>
 
