@@ -110,9 +110,19 @@
       div.style.color = '#fff';
     });
 
-    const divFlexUnique = document.querySelector('.container-flex div')
-    divFlexUnique.innerHTML = divFlexUnique.offsetWidth;
-    divFlexUnique.style.color = '#00b835';
+    const divFlexUnique = document.querySelector('.container-flex div:nth-child(1)')
+    const windowMain = document.querySelector('body');
+
+    windowMain.onload = () => {
+      largura = divFlexUnique.offsetWidth;
+      divFlexUnique.innerHTML = largura;
+    }
+    windowMain.onresize = function () {
+      largura = divFlexUnique.offsetWidth;
+      divFlexUnique.innerHTML = largura;
+    };
+
+
   </script>
 
 </body>
