@@ -13,7 +13,7 @@
 
 Vamos separar em 2 grupos:
 `container` e `item(s)`
-### - - -  CONTAINER
+### - CONTAINER
 - display: grid
 - grid-template-rows
 - grid-template-cols
@@ -24,7 +24,7 @@ Vamos separar em 2 grupos:
 
 ... mais 4 properties e **Alinhamento**
 
-### - - -  ITEM(S)
+### - ITEM(S)
 - grid-column
   - grid-column-start
   - grid-column-end
